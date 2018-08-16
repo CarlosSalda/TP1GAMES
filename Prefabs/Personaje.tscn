@@ -8,30 +8,14 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Personaje" type="RigidBody2D"]
+[node name="Personaje" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
-mode = 0
-mass = 1.0
-friction = 0.0
-bounce = 0.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
+collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index" ]
-salto = -200
-saltoExtra = -300
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

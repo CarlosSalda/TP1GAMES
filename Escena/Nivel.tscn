@@ -1,28 +1,44 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escena/Nivel.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Plataforma.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/resorte.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=4]
 
 [node name="Node2D" type="Node2D" index="0"]
 
-[node name="Personaje" parent="." index="0" instance=ExtResource( 1 )]
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
-position = Vector2( 561.465, 179.373 )
-mode = 2
+[node name="Plataforma" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="Plataforma" parent="." index="1" instance=ExtResource( 2 )]
-
-position = Vector2( 563.745, 354.96 )
+position = Vector2( 238.495, 161.039 )
 friction = 0.0
 _sections_unfolded = [ "Collision", "Pause", "Pickable" ]
+salto = 17
 saltoExtra = 0
+velocidadCaida = 1
 
-[node name="Resorte" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Resorte" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 567.101, 321.12 )
+position = Vector2( 596.096, 463.546 )
 mode = 3
 mass = 100.0
 _sections_unfolded = [ "Angular", "Linear" ]
+salto = 17
+saltoExtra = 9
+velocidadCaida = 0
+
+[node name="Plataforma2" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 591.235, 498.58 )
+salto = 0
+saltoExtra = 0
+velocidadCaida = 0
+
+[node name="Personaje" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 570.054, 307.583 )
+gravedad = 8
 
 
