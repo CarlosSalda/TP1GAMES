@@ -3,26 +3,34 @@
 [ext_resource path="res://Scripts/Nivel.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=2]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="GameManager" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+rango1X = 0
+rango2X = 1000
+rango1Y = 0
+rango2Y = 600
+cantidadMin = 5
+cantidadMax = 10
 
 [node name="Personaje" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 531.094, 51.2637 )
+position = Vector2( 531.094, 41.6283 )
+scale = Vector2( 1, 1.01929 )
 gravedad = 8
 velMov = 7
 
 [node name="Camera2D" type="Camera2D" parent="Personaje" index="2"]
 
+position = Vector2( -4.10107, 9.14639 )
 anchor_mode = 1
 rotating = false
 current = true
 zoom = Vector2( 1, 1 )
-limit_left = -10000000
+limit_left = 20
 limit_top = -10000000
-limit_right = 10000000
+limit_right = 1020
 limit_bottom = 10000000
 limit_smoothed = false
 drag_margin_h_enabled = true
@@ -35,9 +43,9 @@ drag_margin_left = 0.2
 drag_margin_top = 0.2
 drag_margin_right = 0.2
 drag_margin_bottom = 0.2
-editor_draw_screen = true
+editor_draw_screen = false
 editor_draw_limits = false
 editor_draw_drag_margin = false
-_sections_unfolded = [ "Drag Margin", "Limit", "Offset", "Smoothing" ]
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Material", "Offset", "Pause", "Smoothing", "Transform", "Visibility", "Z Index" ]
 
 

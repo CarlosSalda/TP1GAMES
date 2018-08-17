@@ -6,25 +6,33 @@ extends KinematicBody2D
 export var gravedad = 5
 var salto = 0
 var collision
+var padre
 export var velMov = 0
+var tiempoDeCaida = 0
 
 
 
 func _ready():
- pass
+	padre = get_parent()
 
 
 func _process(delta):
-	caerYSaltar()
+	caerYSaltar(delta)
 	dejaDeSubir(delta)
 	MovIzq()
 	MovDer()
 	Acomodarse()
 	
-func caerYSaltar():
+
+	
+func caerYSaltar(deltis):
 	collision = move_and_collide(Vector2(0,gravedad - salto))
+	tiempoDeCaida += 1 *deltis
+	print(tiempoDeCaida)
 	if collision != null:
+		tiempoDeCaida = 0
 		salto = collision.collider.colision()
+		collision = null
 		print(gravedad - salto)
 		
 		
@@ -46,7 +54,8 @@ func Acomodarse():
 func dejaDeSubir(deltis):
 	if salto >0 :
 		salto -= (gravedad + salto)/2 * deltis
-	
+		
+
 
 		
 
