@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Prefabs/Personaje.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Personaje.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/temp1406587188.png" type="Texture" id=2]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 

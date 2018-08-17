@@ -5,7 +5,7 @@ extends RigidBody2D
 
 export var salto = 0
 export var saltoExtra = 0
-export var velocidadCaida = 0
+
 func _ready():
 	#set_contact_monitor( true )
 	#set_max_contacts_reported( 5 )
@@ -18,6 +18,5 @@ func _ready():
 func colision():
 	return salto + saltoExtra
 
-func velocidadCaida():
-	return velocidadCaida
+
 	

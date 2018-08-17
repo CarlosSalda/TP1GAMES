@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Prefabs/resorte.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/resorte.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/resize.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -30,8 +30,8 @@ angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
-salto = -200
-saltoExtra = -300
+salto = 17
+saltoExtra = 0
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

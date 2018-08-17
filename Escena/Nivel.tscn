@@ -12,33 +12,25 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Plataforma" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 238.495, 161.039 )
+position = Vector2( 570.685, 480.925 )
 friction = 0.0
 _sections_unfolded = [ "Collision", "Pause", "Pickable" ]
-salto = 17
-saltoExtra = 0
-velocidadCaida = 1
 
 [node name="Resorte" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 596.096, 463.546 )
+position = Vector2( 218.794, 252.339 )
 mode = 3
 mass = 100.0
 _sections_unfolded = [ "Angular", "Linear" ]
-salto = 17
-saltoExtra = 9
-velocidadCaida = 0
 
 [node name="Plataforma2" parent="." index="2" instance=ExtResource( 2 )]
 
-position = Vector2( 591.235, 498.58 )
-salto = 0
-saltoExtra = 0
-velocidadCaida = 0
+position = Vector2( 213.933, 287.373 )
 
 [node name="Personaje" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( 570.054, 307.583 )
+position = Vector2( 578.256, 16.4043 )
 gravedad = 8
+velMov = 7
 
 
