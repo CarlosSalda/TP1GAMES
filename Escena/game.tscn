@@ -1,25 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Scripts/Nivel.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/GameManager.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/puntaje.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=3]
 
-[node name="GameManager" type="Node2D" index="0"]
+[node name="GameManager" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 rango1X = 0
 rango2X = 1000
 rango1Y = 0
-rango2Y = 600
-cantidadMin = 5
-cantidadMax = 10
+rango2Y = -1000
+cantidadMin = 10
+cantidadMax = 100
 
-[node name="Personaje" parent="." index="0" instance=ExtResource( 2 )]
+[node name="CanvasLayer" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 531.094, 41.6283 )
+[node name="Personaje" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 606.62, -509.713 )
 scale = Vector2( 1, 1.01929 )
 gravedad = 8
 velMov = 7
+tiempoDeCaidaMax = 3
 
 [node name="Camera2D" type="Camera2D" parent="Personaje" index="2"]
 

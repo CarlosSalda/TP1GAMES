@@ -9,7 +9,7 @@ var collision
 var padre
 export var velMov = 0
 var tiempoDeCaida = 0
-
+export var tiempoDeCaidaMax = 2
 
 
 func _ready():
@@ -28,7 +28,6 @@ func _process(delta):
 func caerYSaltar(deltis):
 	collision = move_and_collide(Vector2(0,gravedad - salto))
 	tiempoDeCaida += 1 *deltis
-	print(tiempoDeCaida)
 	if collision != null:
 		tiempoDeCaida = 0
 		salto = collision.collider.colision()
