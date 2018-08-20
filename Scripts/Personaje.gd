@@ -53,7 +53,7 @@ func Acomodarse():
 
 func dejaDeSubir(deltis):
 	if salto >0 :
-		get_node("Camera2D").limit_bottom = position.y +400
+		get_node("Camera2D").limit_bottom = position.y +1000
 		salto -= (gravedad + salto)/2 * deltis
 		
 

@@ -1,12 +1,24 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/nivel1.gd" type="Script" id=1]
 [ext_resource path="res://Escena/game.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Plataforma.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/resorte.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/PlataformasMovibles.tscn" type="PackedScene" id=5]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
 [node name="GameManager" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 11.3843, -756.047 )
+list = [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ) ]
+cantidadMax = 8
+distancia = 100
+
+[node name="Plataforma" parent="GameManager" index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 504.707, -326.352 )
 
 

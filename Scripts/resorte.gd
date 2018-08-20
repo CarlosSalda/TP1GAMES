@@ -5,18 +5,40 @@ extends StaticBody2D
 
 export var salto = 0
 export var saltoExtra = 0
+export var soyMovible = false
+export var tiempoMov = 0 
+var timer
+var suma = 1
+ 
+#timeout is what says in docs, in signals
+#self is who respond to the callback
+#_on_timer_timeout is the callback, can have any name
 
 func _ready():
-	#set_contact_monitor( true )
-	#set_max_contacts_reported( 5 )
-	#connect("body_entered",self,"colision")
-	pass
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+	timer = Timer.new()
+	timer.wait_time = tiempoMov
+	timer.connect("timeout",self,"_on_timer_timeout") 
+	add_child(timer)
+	if soyMovible:
+		timer.start()
+		
+func _process(delta):
+	if soyMovible:
+		mover()
+
+	 	
+func _on_timer_timeout():
+	suma = suma * -1
+		
 func colision():
 	return salto + saltoExtra
 
 
+
+		
+func mover():
+	self.position.x += suma
 	
+	
+		
+		

@@ -19,8 +19,11 @@ constant_angular_velocity = 0.0
 friction = 0.0
 bounce = 0.0
 script = ExtResource( 1 )
-salto = 40
+_sections_unfolded = [ "Collision", "Pickable" ]
+salto = 45
 saltoExtra = 20
+soyMovible = false
+tiempoMov = 0
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
