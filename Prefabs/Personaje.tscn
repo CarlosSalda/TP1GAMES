@@ -18,6 +18,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index" ]
 gravedad = 5
 velMov = 0
+tiempoDeCaidaMax = 2.5
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 

@@ -3,13 +3,13 @@ extends KinematicBody2D
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-export var gravedad = 5
+export var gravedad = 8
 var salto = 0
 var collision
 var padre
 export var velMov = 0
 var tiempoDeCaida = 0
-export var tiempoDeCaidaMax = 2
+export var tiempoDeCaidaMax = float(2.5)
 
 
 func _ready():
@@ -26,7 +26,7 @@ func _process(delta):
 
 	
 func caerYSaltar(deltis):
-	collision = move_and_collide(Vector2(0,gravedad - salto))
+	collision = move_and_collide(Vector2(0,gravedad - salto))		
 	tiempoDeCaida += 1 *deltis
 	if collision != null:
 		tiempoDeCaida = 0
@@ -49,12 +49,13 @@ func Acomodarse():
 	if position.x > 1000:
 		position.x= -40
 	
-	
+
+
 func dejaDeSubir(deltis):
 	if salto >0 :
+		get_node("Camera2D").limit_bottom = position.y +400
 		salto -= (gravedad + salto)/2 * deltis
 		
-
 
 		
 
