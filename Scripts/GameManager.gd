@@ -37,14 +37,14 @@ func _process(delta):
 	
 func borrarInutiles():
 	var hijos= get_children()
-	var i = 8
+	var i = 4
 	while(!hijos.empty() && i < hijos.size()):
-		if hijos[i].position.y > personaje.position.y + 300 and hijos[i].name != "Personaje":
+		if hijos[i].position.y > personaje.position.y + 600 and hijos[i].name != "Personaje":
 			hijos[i].queue_free()
 		i += 1
 
 func Puntaje():
-	puntaje = str(abs(int( personaje.position.y)))
+	puntaje = str(-(int( personaje.position.y)))
 	text.text = puntaje
 	
 

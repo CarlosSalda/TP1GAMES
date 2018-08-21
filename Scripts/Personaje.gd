@@ -44,10 +44,10 @@ func MovDer():
 		position.x += velMov
 
 func Acomodarse():
-	if position.x < -40:
+	if position.x < 0:
 	   position.x = 1000	
-	if position.x > 1000:
-		position.x= -40
+	if position.x > OS.get_real_window_size().x:
+		position.x= 0
 	
 
 

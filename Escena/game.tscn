@@ -14,7 +14,7 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 list = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ]
 rango1X = 10
-rango2X = 900
+rango2X = 800
 cantidadMax = 100
 distancia = 150
 
@@ -30,14 +30,15 @@ tiempoDeCaidaMax = 3.0
 
 [node name="Camera2D" type="Camera2D" parent="Personaje" index="2"]
 
-position = Vector2( -6.62, -39.5246 )
+position = Vector2( -5, 8.38609 )
+scale = Vector2( 2.96875, 2.49721 )
 anchor_mode = 1
 rotating = false
 current = true
 zoom = Vector2( 1, 1 )
-limit_left = 20
+limit_left = 0
 limit_top = -10000000
-limit_right = 1020
+limit_right = 900
 limit_bottom = 100
 limit_smoothed = true
 drag_margin_h_enabled = false
@@ -54,6 +55,6 @@ editor_draw_screen = false
 editor_draw_limits = false
 editor_draw_drag_margin = false
 script = ExtResource( 7 )
-_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Material", "Offset", "Pause", "Smoothing", "Transform", "Z Index" ]
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Material", "Offset", "Smoothing", "Transform", "Z Index" ]
 
 
