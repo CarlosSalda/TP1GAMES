@@ -8,8 +8,8 @@ export var saltoExtra = 0
 export var soyMovible = false
 export var tiempoMov = 0 
 var timer
-var suma = 1
- 
+var suma = 3
+export var meRompo = false
 #timeout is what says in docs, in signals
 #self is who respond to the callback
 #_on_timer_timeout is the callback, can have any name
@@ -31,9 +31,9 @@ func _on_timer_timeout():
 	suma = suma * -1
 		
 func colision():
+	if meRompo:
+		queue_free()
 	return salto + saltoExtra
-
-
 
 		
 func mover():

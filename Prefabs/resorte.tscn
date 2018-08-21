@@ -24,6 +24,7 @@ salto = 45
 saltoExtra = 20
 soyMovible = false
 tiempoMov = 0
+meRompo = false
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -39,5 +40,6 @@ one_way_collision = true
 [node name="Plataforma" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 2.20529, 26.4632 )
+meRompo = false
 
 

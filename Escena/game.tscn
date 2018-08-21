@@ -1,26 +1,28 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Plataforma.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/resorte.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/PlataformasMovibles.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/puntaje.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Escena/Camera2D.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/PlataformasQueSeRompen.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/SeMuevenYSeRompen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/puntaje.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escena/Camera2D.gd" type="Script" id=9]
 
-[node name="GameManager" type="Node2D"]
+[node name="GameManager" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-list = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ]
+list = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 6 ) ]
 rango1X = 10
 rango2X = 800
 cantidadMax = 100
 distancia = 150
 
-[node name="CanvasLayer" parent="." index="0" instance=ExtResource( 5 )]
+[node name="CanvasLayer" parent="." index="0" instance=ExtResource( 7 )]
 
-[node name="Personaje" parent="." index="1" instance=ExtResource( 6 )]
+[node name="Personaje" parent="." index="1" instance=ExtResource( 8 )]
 
 position = Vector2( 510, -510 )
 scale = Vector2( 1, 1.01929 )
@@ -54,7 +56,7 @@ drag_margin_bottom = 0.2
 editor_draw_screen = false
 editor_draw_limits = false
 editor_draw_drag_margin = false
-script = ExtResource( 7 )
+script = ExtResource( 9 )
 _sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Material", "Offset", "Smoothing", "Transform", "Z Index" ]
 
 

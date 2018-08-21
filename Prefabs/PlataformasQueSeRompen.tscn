@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Prefabs/Plataforma.tscn" type="PackedScene" id=1]
+
+[node name="Plataforma" instance=ExtResource( 1 )]
+
+modulate = Color( 0.980469, 0.0459595, 0.0459595, 1 )
+_sections_unfolded = [ "Pause", "Visibility" ]
+meRompo = true
+
+

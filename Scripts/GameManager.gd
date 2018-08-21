@@ -55,7 +55,7 @@ func _on_timer_timeout():
 		
 func Plataformas(posActualX= 0,posActualY= 0):
 	for i in cantidadMax:
-		var scene_instance = list[int(DameAleatorio(0,3))]
+		var scene_instance = list[int(DameAleatorio(1,list.size()))]
 		scene_instance = scene_instance.instance()
 		scene_instance.set_name("Plataforma")
 		add_child(scene_instance)
