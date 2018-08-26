@@ -44,7 +44,7 @@ func borrarInutiles():
 		i += 1
 
 func Puntaje():
-	puntaje = str(-(int( personaje.position.y)))
+	puntaje = str(-(int( personaje.position.y))/100)
 	text.text = puntaje
 	
 
@@ -54,8 +54,13 @@ func _on_timer_timeout():
 		
 		
 func Plataformas(posActualX= 0,posActualY= 0):
+	var scene_instance = list[0]
+	scene_instance = scene_instance.instance()
+	scene_instance.set_name("Plataforma")
+	add_child(scene_instance)
+	scene_instance.translate(Vector2(504,-326))
 	for i in cantidadMax:
-		var scene_instance = list[int(DameAleatorio(1,list.size()))]
+		scene_instance = list[int(DameAleatorio(1,list.size()))]
 		scene_instance = scene_instance.instance()
 		scene_instance.set_name("Plataforma")
 		add_child(scene_instance)

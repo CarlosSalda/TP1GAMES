@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/nivel1.gd" type="Script" id=1]
 [ext_resource path="res://Escena/game.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Prefabs/Plataforma.tscn" type="PackedScene" id=3]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -15,9 +14,5 @@ position = Vector2( 11.3843, -756.047 )
 rango1X = -10
 cantidadMax = 8
 distancia = 100
-
-[node name="Plataforma" parent="GameManager" index="2" instance=ExtResource( 3 )]
-
-position = Vector2( 504.707, -326.352 )
 
 
