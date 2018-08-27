@@ -24,7 +24,7 @@ func _ready():
 	timer.wait_time = 1
 	timer.connect("timeout",self,"_on_timer_timeout") 
 	timer.start()
-	Plataformas()
+	PrepararMapa()
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 
@@ -33,15 +33,12 @@ func _ready():
 func _process(delta):
 	
 	Puntaje()
-	borrarInutiles()
+
 	
-func borrarInutiles():
-	var hijos= get_children()
-	var i = 4
-	while(!hijos.empty() && i < hijos.size()):
-		if hijos[i].position.y > personaje.position.y + 600 and hijos[i].name != "Personaje":
-			hijos[i].queue_free()
-		i += 1
+func PrepararMapa():
+	for i in 50:
+		Plataformas()
+	
 
 func Puntaje():
 	puntaje = str(-(int( personaje.position.y))/100)
@@ -51,15 +48,16 @@ func Puntaje():
 func _on_timer_timeout():
 	Plataformas()
 	print("mas plataformas")
+	
 		
 		
-func Plataformas(posActualX= 0,posActualY= 0):
-	var scene_instance = list[0]
+func Plataformas(posActualX= 0,posActualY= 0, extra = 0):
+	var scene_instance = list[1]
 	scene_instance = scene_instance.instance()
 	scene_instance.set_name("Plataforma")
 	add_child(scene_instance)
 	scene_instance.translate(Vector2(504,-326))
-	for i in cantidadMax:
+	for i in cantidadMax :
 		scene_instance = list[int(DameAleatorio(1,list.size()))]
 		scene_instance = scene_instance.instance()
 		scene_instance.set_name("Plataforma")

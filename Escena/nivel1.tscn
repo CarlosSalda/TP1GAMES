@@ -3,7 +3,7 @@
 [ext_resource path="res://Scripts/nivel1.gd" type="Script" id=1]
 [ext_resource path="res://Escena/game.tscn" type="PackedScene" id=2]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]

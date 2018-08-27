@@ -9,7 +9,7 @@ var collision
 var padre
 export var velMov = 0
 var tiempoDeCaida = 0
-export var tiempoDeCaidaMax = float(2.5)
+export var tiempoDeCaidaMax = 1
 
 
 func _ready():
@@ -22,15 +22,14 @@ func _process(delta):
 	MovIzq()
 	MovDer()
 	Acomodarse()
-	
+	contarTiempoDeCaida(delta)
 
 	
 func caerYSaltar(deltis):
 	collision = move_and_collide(Vector2(0,gravedad - salto))		
-	tiempoDeCaida += 1 *deltis
 	if collision != null:
 		tiempoDeCaida = 0
-		salto = collision.collider.colision()
+		salto = collision.collider.colision(self)
 		collision = null
 		print(gravedad - salto)
 		
@@ -44,17 +43,21 @@ func MovDer():
 		position.x += velMov
 
 func Acomodarse():
-	if position.x < -100:
+	if position.x < -100: # arreglar resolucion
 	   position.x = 900	
 	if position.x > 1000:
 		position.x= -100
-	
 
+func contarTiempoDeCaida(delta):
+	if gravedad - salto > 0:
+		tiempoDeCaida += 1 * delta
+		print(tiempoDeCaida)
 
 func dejaDeSubir(deltis):
 	if salto >0 :
 		get_node("Camera2D").limit_bottom = position.y +1000
 		salto -= (gravedad + salto)/2 * deltis
+	
 		
 
 		

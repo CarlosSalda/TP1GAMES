@@ -13,7 +13,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	if personaje.tiempoDeCaida >  2.0 :
+	if personaje.tiempoDeCaida >  2.5 :
 		self.current = false
-	if personaje.tiempoDeCaida < 2.0:
+	if personaje.tiempoDeCaida < 2.5:
 		self.current = true	

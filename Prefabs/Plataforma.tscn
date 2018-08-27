@@ -1,14 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/resorte.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/resize.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/jetpack.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites/resize.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Plataforma" type="StaticBody2D"]
+[node name="Plataforma" type="StaticBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -18,20 +19,20 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause" ]
-__meta__ = {
-"_edit_lock_": true
-}
+_sections_unfolded = [ "Pause", "Transform" ]
 salto = 45
 saltoExtra = 0
 soyMovible = false
 tiempoMov = 0
 meRompo = false
+listPowerUp = [ ExtResource( 2 ), ExtResource( 2 ) ]
+puedoTenerPowerUp = true
+distanciaDeBorrado = 600
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 scale = Vector2( 0.36182, 0.36182 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
