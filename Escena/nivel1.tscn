@@ -11,7 +11,8 @@ _sections_unfolded = [ "Transform" ]
 [node name="GameManager" parent="." index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 11.3843, -756.047 )
-rango1X = -10
+rango1X = 0
+rango2X = 0
 cantidadMax = 8
 distancia = 100
 

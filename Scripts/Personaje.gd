@@ -23,7 +23,7 @@ func _process(delta):
 	MovDer()
 	Acomodarse()
 	contarTiempoDeCaida(delta)
-
+	MeMori()
 	
 func caerYSaltar(deltis):
 	collision = move_and_collide(Vector2(0,gravedad - salto))		
@@ -32,7 +32,10 @@ func caerYSaltar(deltis):
 		salto = collision.collider.colision(self)
 		collision = null
 		print(gravedad - salto)
-		
+
+func MeMori():
+	if tiempoDeCaida >= tiempoDeCaidaMax:
+		padre.MostrarMenuMeMori()
 		
 func MovIzq():
 	if Input.is_action_pressed("ui_left"):
@@ -43,10 +46,10 @@ func MovDer():
 		position.x += velMov
 
 func Acomodarse():
-	if position.x < -100: # arreglar resolucion
-	   position.x = 900	
-	if position.x > 1000:
-		position.x= -100
+	if position.x < 0: # arreglar resolucion
+	   position.x = get_viewport().size.x
+	if position.x > get_viewport().size.x:
+		position.x= 0
 
 func contarTiempoDeCaida(delta):
 	if gravedad - salto > 0:

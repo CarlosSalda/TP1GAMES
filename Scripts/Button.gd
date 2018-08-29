@@ -10,7 +10,7 @@ func _ready():
 	pass
 	
 func _pressed():
-	get_parent().get_parent().VolverAJugar()
+	get_tree().change_scene("res://Escena/nivel1.tscn")
 	
 	pass
 #func _process(delta):

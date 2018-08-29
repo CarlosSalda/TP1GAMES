@@ -10,7 +10,7 @@
 [ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Escena/Camera2D.gd" type="Script" id=9]
 
-[node name="GameManager" type="Node2D" index="0"]
+[node name="GameManager" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -28,7 +28,7 @@ position = Vector2( 510, -510 )
 scale = Vector2( 1, 1.01929 )
 gravedad = 25
 velMov = 5
-tiempoDeCaidaMax = 3.0
+tiempoDeCaidaMax = 2
 
 [node name="Camera2D" type="Camera2D" parent="Personaje" index="2"]
 
