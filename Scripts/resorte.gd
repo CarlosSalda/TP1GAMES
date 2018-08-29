@@ -33,9 +33,13 @@ func _ready():
 	posibilidadDePlataforma()
 		
 func _process(delta):
+	aumentarDificultad(delta)
 	borrameSiNoEstoyVisible()
 	if soyMovible:
 		mover()
+		
+func aumentarDificultad(delta):
+	salto += 0.09 * delta
 	
 func posibilidadDePlataforma():
 	if  int(rand_range(1,15)) == 5 && puedoTenerPowerUp:

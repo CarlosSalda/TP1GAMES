@@ -12,7 +12,7 @@ var camera
 var yDePlataformas = 0
 func _ready():
 	ponerPrimeraPlataforma()
-	rango2X = get_viewport().size.x
+	rango2X = get_viewport().size.x - 20
 	camera = get_node("Personaje/Camera2D")
 	text = get_node("CanvasLayer/Label")
 	personaje = get_node("Personaje")
@@ -38,7 +38,7 @@ func cantidadDePlataformas(cant):
 		Plataformas()
 
 func MostrarMenuMeMori():
-		get_tree().change_scene("res://Prefabs/PanelPerdiste.tscn")
+		get_tree().change_scene("res://Escena/PanelPerdiste.tscn")
 		
 
 func Puntaje():
@@ -64,7 +64,7 @@ func Plataformas(posActualX= 0,posActualY= 0, extra = 0):
 		scene_instance = scene_instance.instance()
 		scene_instance.set_name("Plataforma")
 		add_child(scene_instance)
-		scene_instance.translate(Vector2 (DameAleatorio(posActualX + rango1X,posActualX + rango2X),DameAleatorio(yDePlataformas,yDePlataformas - 10)))
+		scene_instance.translate(Vector2 (DameAleatorio(posActualX + rango1X,posActualX + rango2X),DameAleatorio(yDePlataformas-150 ,yDePlataformas - 200)))
 		yDePlataformas -= distancia
 	print("MAS PLATAFORMAS")
 

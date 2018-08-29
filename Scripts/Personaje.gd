@@ -10,13 +10,14 @@ var padre
 export var velMov = 0
 var tiempoDeCaida = 0
 export var tiempoDeCaidaMax = 1
-
+var saltoExtra = 0
 
 func _ready():
 	padre = get_parent()
 
 
 func _process(delta):
+	aumentarDificultad(delta)
 	caerYSaltar(delta)
 	dejaDeSubir(delta)
 	MovIzq()
@@ -26,12 +27,16 @@ func _process(delta):
 	MeMori()
 	
 func caerYSaltar(deltis):
-	collision = move_and_collide(Vector2(0,gravedad - salto))		
+	collision = move_and_collide(Vector2(0,gravedad - salto ))		
 	if collision != null:
 		tiempoDeCaida = 0
 		salto = collision.collider.colision(self)
 		collision = null
 		print(gravedad - salto)
+
+func aumentarDificultad(delta):
+	gravedad += 0.1 * delta
+	velMov += 0.1 * delta
 
 func MeMori():
 	if tiempoDeCaida >= tiempoDeCaidaMax:

@@ -3,10 +3,10 @@
 [ext_resource path="res://Scripts/Personaje.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/temp1406587188.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+radius = 40.0
 
 [node name="Personaje" type="KinematicBody2D"]
 
@@ -27,7 +27,7 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-scale = Vector2( 4.23077, 4 )
+position = Vector2( -10, 0 )
 shape = SubResource( 1 )
 
 

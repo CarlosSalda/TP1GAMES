@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="TP1GAMES"
-run/main_scene="res://Escena/nivel1.tscn"
+run/main_scene="res://Escena/main.tscn"
 config/icon="res://icon.png"
 
 [display]

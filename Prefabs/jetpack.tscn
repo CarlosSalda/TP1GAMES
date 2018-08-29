@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 16.8713, 25.5154 )
 
 [node name="Node2D" type="StaticBody2D"]
 
@@ -29,8 +29,6 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -3.48534, -0.36766 )
-scale = Vector2( 2.44101, 2.62524 )
 shape = SubResource( 1 )
 one_way_collision = true
 
