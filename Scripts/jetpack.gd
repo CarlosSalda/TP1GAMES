@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-export var Impulso = 200
+export var Impulso = 150
 var gameManager 
 # class member variables go here, for example:
 # var a = 2
