@@ -8,7 +8,7 @@ export var saltoExtra = 0
 export var soyMovible = false
 export var tiempoMov = 0 
 var timer
-var suma = 3
+var suma = 2
 export var meRompo = false
 export var listPowerUp= []
 export var puedoTenerPowerUp = false
@@ -39,7 +39,7 @@ func _process(delta):
 		mover()
 		
 func aumentarDificultad(delta):
-	salto += 0.09 * delta
+		salto += 0.4 * delta
 	
 func posibilidadDePlataforma():
 	if  int(rand_range(1,15)) == 5 && puedoTenerPowerUp:
@@ -63,6 +63,10 @@ func borrameSiNoEstoyVisible():
 		
 func mover():
 	self.position.x += suma
+	if self.position.x < 0:
+		_on_timer_timeout()
+	if self.position.x > get_viewport().size.x:
+		_on_timer_timeout()
 	
 	
 		

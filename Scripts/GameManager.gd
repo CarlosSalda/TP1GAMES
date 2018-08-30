@@ -64,7 +64,7 @@ func Plataformas(posActualX= 0,posActualY= 0, extra = 0):
 		scene_instance = scene_instance.instance()
 		scene_instance.set_name("Plataforma")
 		add_child(scene_instance)
-		scene_instance.translate(Vector2 (DameAleatorio(posActualX + rango1X,posActualX + rango2X),DameAleatorio(yDePlataformas-150 ,yDePlataformas - 200)))
+		scene_instance.translate(Vector2 (DameAleatorio(posActualX + rango1X,posActualX + rango2X),DameAleatorio(yDePlataformas ,yDePlataformas -10)))
 		yDePlataformas -= distancia
 	print("MAS PLATAFORMAS")
 

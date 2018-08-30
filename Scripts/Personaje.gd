@@ -35,8 +35,8 @@ func caerYSaltar(deltis):
 		print(gravedad - salto)
 
 func aumentarDificultad(delta):
-	gravedad += 0.1 * delta
-	velMov += 0.1 * delta
+	gravedad += 0.09 * delta
+	velMov += 0.09 * delta
 
 func MeMori():
 	if tiempoDeCaida >= tiempoDeCaidaMax:
