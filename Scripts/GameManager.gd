@@ -11,11 +11,11 @@ export var distancia= 0
 var camera
 var yDePlataformas = 0
 func _ready():
-	ponerPrimeraPlataforma()
-	rango2X = get_viewport().size.x - 20
+	rango2X = get_viewport().size.x - 50
 	camera = get_node("Personaje/Camera2D")
 	text = get_node("CanvasLayer/Label")
 	personaje = get_node("Personaje")
+	ponerPrimeraPlataforma()
 	yDePlataformas = personaje.position.y
 	#timer = Timer.new()
 	#add_child(timer)
@@ -50,7 +50,7 @@ func ponerPrimeraPlataforma():
 	scene_instance = scene_instance.instance()
 	scene_instance.set_name("Plataforma")
 	add_child(scene_instance)
-	scene_instance.translate(Vector2(504,-326))	
+	scene_instance.translate(Vector2(personaje.position.x,personaje.position.y + 100))	
 
 #func _on_timer_timeout():
 #	Plataformas()
@@ -64,7 +64,7 @@ func Plataformas(posActualX= 0,posActualY= 0, extra = 0):
 		scene_instance = scene_instance.instance()
 		scene_instance.set_name("Plataforma")
 		add_child(scene_instance)
-		scene_instance.translate(Vector2 (DameAleatorio(posActualX + rango1X,posActualX + rango2X),DameAleatorio(yDePlataformas ,yDePlataformas -10)))
+		scene_instance.translate(Vector2 (DameAleatorio(posActualX + rango1X + 50,posActualX + rango2X),DameAleatorio(yDePlataformas ,yDePlataformas -10)))
 		yDePlataformas -= distancia
 	print("MAS PLATAFORMAS")
 

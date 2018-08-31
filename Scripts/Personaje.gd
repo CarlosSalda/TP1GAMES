@@ -36,7 +36,7 @@ func caerYSaltar(deltis):
 
 func aumentarDificultad(delta):
 	gravedad += 0.09 * delta
-	velMov += 0.09 * delta
+	velMov += 0.05 * delta
 
 func MeMori():
 	if tiempoDeCaida >= tiempoDeCaidaMax:
@@ -63,7 +63,7 @@ func contarTiempoDeCaida(delta):
 
 func dejaDeSubir(deltis):
 	if salto >0 :
-		get_node("Camera2D").limit_bottom = position.y +1000
+		#get_node("Camera2D").limit_bottom = position.y +1000
 		salto -= (gravedad + salto)/2 * deltis
 	
 		

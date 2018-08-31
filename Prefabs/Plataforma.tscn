@@ -9,7 +9,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 51.7801, 22.419 )
 
-[node name="Plataforma" type="StaticBody2D"]
+[node name="Plataforma" type="StaticBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -23,7 +23,7 @@ _sections_unfolded = [ "Pause", "Transform" ]
 salto = 45
 saltoExtra = 0
 soyMovible = false
-tiempoMov = 0
+tiempoMov = 1
 meRompo = false
 listPowerUp = [ ExtResource( 2 ), ExtResource( 2 ) ]
 puedoTenerPowerUp = true

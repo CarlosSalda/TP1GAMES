@@ -6,17 +6,22 @@ extends Camera2D
 var personaje
 
 func _ready():
-	personaje = get_parent()
-	limit_left = 0
-	limit_right = get_viewport().size.x
+	personaje = get_parent().get_node("Personaje")
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	
-	pass
 
 func _process(delta):
+	dejarDeSeguir()
+	posicionInicial()
+ 	
 	
+
+func dejarDeSeguir():
 	if personaje.tiempoDeCaida >  1.5 :
 		self.current = false
 	if personaje.tiempoDeCaida < 1.5:
 		self.current = true	
+		
+func posicionInicial():
+	self.position.y = personaje.position.y

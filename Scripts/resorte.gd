@@ -6,7 +6,7 @@ extends StaticBody2D
 export var salto = 0
 export var saltoExtra = 0
 export var soyMovible = false
-export var tiempoMov = 0 
+export var tiempoMov = 1 
 var timer
 var suma = 2
 export var meRompo = false
@@ -63,9 +63,9 @@ func borrameSiNoEstoyVisible():
 		
 func mover():
 	self.position.x += suma
-	if self.position.x < 0:
+	if self.position.x < 50:
 		_on_timer_timeout()
-	if self.position.x > get_viewport().size.x:
+	if self.position.x > get_viewport().size.x - 50:
 		_on_timer_timeout()
 	
 	
