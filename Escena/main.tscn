@@ -19,7 +19,7 @@ use_filter = false
 font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="CanvasLayer" type="CanvasLayer" index="0"]
+[node name="CanvasLayer" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -94,5 +94,6 @@ flat = false
 align = 1
 script = ExtResource( 2 )
 _sections_unfolded = [ "custom_fonts" ]
+panelPerdi = false
 
 

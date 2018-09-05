@@ -13,7 +13,7 @@
 [node name="GameManager" type="Node2D"]
 
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Pause", "Transform" ]
 list = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 6 ) ]
 rango1X = 10
 rango2X = 800
@@ -26,7 +26,6 @@ distancia = 150
 
 position = Vector2( 400, 500 )
 scale = Vector2( 1, 1.01929 )
-gravedad = 25
 velMov = 5
 tiempoDeCaidaMax = 2
 

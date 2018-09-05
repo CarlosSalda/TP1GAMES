@@ -11,9 +11,11 @@ export var velMov = 0
 var tiempoDeCaida = 0
 export var tiempoDeCaidaMax = 1
 var saltoExtra = 0
+var sprite
 
 func _ready():
 	padre = get_parent()
+	sprite = get_node("Sprite")
 
 
 func _process(delta):
@@ -45,10 +47,12 @@ func MeMori():
 func MovIzq():
 	if Input.is_action_pressed("ui_left"):
 		position.x -= velMov
+		sprite.flip_h = true
 		
 func MovDer():
 	if Input.is_action_pressed("ui_right"):
 		position.x += velMov
+		sprite.flip_h = false
 
 func Acomodarse():
 	if position.x < 0: # arreglar resolucion
@@ -65,8 +69,7 @@ func dejaDeSubir(deltis):
 	if salto >0 :
 		#get_node("Camera2D").limit_bottom = position.y +1000
 		salto -= (gravedad + salto)/2 * deltis
-	
-		
+
 
 		
 

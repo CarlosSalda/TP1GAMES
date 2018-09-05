@@ -7,25 +7,17 @@ var personaje
 var puntaje
 var text
 export var distancia= 0
-#var timer
-var camera
 var yDePlataformas = 0
+var scene = load("res://Escena/PanelPerdiste.tscn") 
+var scene_instance = scene.instance()
 func _ready():
 	rango2X = get_viewport().size.x - 50
-	camera = get_node("Personaje/Camera2D")
 	text = get_node("CanvasLayer/Label")
 	personaje = get_node("Personaje")
 	ponerPrimeraPlataforma()
 	yDePlataformas = personaje.position.y
-	#timer = Timer.new()
-	#add_child(timer)
-	#timer.wait_time = 1
-	#timer.connect("timeout",self,"_on_timer_timeout") 
-	#timer.start()
 	cantidadDePlataformas(15)
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-
+	
 
 
 func _process(delta):
@@ -38,7 +30,9 @@ func cantidadDePlataformas(cant):
 		Plataformas()
 
 func MostrarMenuMeMori():
-		get_tree().change_scene("res://Escena/PanelPerdiste.tscn")
+		get_tree().paused = true
+		scene_instance.set_name("perdiste")
+		add_child(scene_instance)
 		
 
 func Puntaje():

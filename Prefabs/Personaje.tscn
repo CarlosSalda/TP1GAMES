@@ -1,33 +1,33 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Personaje.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/temp1406587188.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Hamster.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=1]
 
 custom_solver_bias = 0.0
-radius = 40.0
+radius = 30.0
+height = 60.0
 
-[node name="Personaje" type="KinematicBody2D"]
+[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Material", "Pause", "Pickable", "Transform", "Visibility", "Z Index" ]
-gravedad = 30
+gravedad = 25
 velMov = 0
 tiempoDeCaidaMax = 1
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 0.368889, 0.368889 )
+scale = Vector2( 0.0463583, 0.0463583 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( -10, 0 )
 shape = SubResource( 1 )
 
 
