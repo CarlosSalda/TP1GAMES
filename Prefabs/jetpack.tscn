@@ -1,15 +1,16 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/jetpack.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/jet-pack-36941_960_720.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/GASOIL.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16.8713, 25.5154 )
+extents = Vector2( 16.8713, 20.6461 )
 
-[node name="Node2D" type="StaticBody2D"]
+[node name="Node2D" type="StaticBody2D" index="0"]
 
+scale = Vector2( 1.7879, 1.7879 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

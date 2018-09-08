@@ -40,7 +40,7 @@ func Puntaje():
 		puntaje = str(-(int( personaje.position.y))/50)
 		text.text = puntaje
 
-func ponerPrimeraPlataforma():
+func ponerPrimeraPlataforma(): #  en el ready poner siempre esto
 	var scene_instance = list[1]
 	scene_instance = scene_instance.instance()
 	scene_instance.set_name("Plataforma")
@@ -52,8 +52,8 @@ func ponerPrimeraPlataforma():
 #	print("mas plataformas")
 	
 		
-	#Esta medio fiero	
-func Plataformas(posActualX= 0,posActualY= 0, extra = 0):
+	
+func Plataformas(posActualX= 0,posActualY= 0, extra = 0): #Esta medio fiero	, podria estar mejor 
 	for i in cantidadMax :
 		var scene_instance = list[int(DameAleatorio(1,list.size()))]
 		scene_instance = scene_instance.instance()

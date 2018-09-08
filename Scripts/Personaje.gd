@@ -1,8 +1,5 @@
 extends KinematicBody2D
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 export var gravedad = 8
 var salto = 0
 var collision
@@ -13,6 +10,7 @@ export var tiempoDeCaidaMax = 1
 var saltoExtra = 0
 var sprite
 var fuego
+var unSalto = false
 
 func _ready():
 	fuego = get_node("AnimatedSprite")
@@ -32,11 +30,14 @@ func _process(delta):
 	
 func caerYSaltar(deltis):
 	collision = move_and_collide(Vector2(0,gravedad - salto ))		
-	if collision != null:
+	if collision != null and collision.collider.get_meta("type") == "Plataforma": #Alto cortocircuito guarda
 		tiempoDeCaida = 0
 		salto = collision.collider.colision(self)
 		collision = null
 		print(gravedad - salto)
+	if collision != null and collision.collider.get_meta("type") == "PowerUp":
+		collision.collider.colision(self)
+		tiempoDeCaida = 0 #esto es por si es un power up que te  hace saltar 
 	
 
 func aumentarDificultad(delta):

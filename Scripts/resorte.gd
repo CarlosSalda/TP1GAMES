@@ -22,6 +22,7 @@ var gameManager
 #_on_timer_timeout is the callback, can have any name
 
 func _ready():
+	self.set_meta("type","Plataforma")
 	gameManager = get_parent()
 	timer = Timer.new()
 	timer.wait_time = tiempoMov
