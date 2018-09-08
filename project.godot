@@ -17,9 +17,8 @@ config/icon="res://icon.png"
 [display]
 
 window/size/width=800
-window/size/height=1280
+window/size/height=1000
 window/size/resizable=false
-window/size/borderless=true
 window/handheld/orientation="portrait"
 
 [rendering]

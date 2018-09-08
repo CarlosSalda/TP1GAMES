@@ -2,7 +2,9 @@
 
 [ext_resource path="res://Fuente/PoiretOne-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=2]
-[ext_resource path="res://Escena/Label2.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Label2.gd" type="Script" id=3]
+
+
 
 [sub_resource type="DynamicFont" id=1]
 

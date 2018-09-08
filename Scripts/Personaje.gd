@@ -12,11 +12,13 @@ var tiempoDeCaida = 0
 export var tiempoDeCaidaMax = 1
 var saltoExtra = 0
 var sprite
+var fuego
 
 func _ready():
+	fuego = get_node("AnimatedSprite")
 	padre = get_parent()
 	sprite = get_node("Sprite")
-
+	
 
 func _process(delta):
 	aumentarDificultad(delta)
@@ -35,6 +37,7 @@ func caerYSaltar(deltis):
 		salto = collision.collider.colision(self)
 		collision = null
 		print(gravedad - salto)
+	
 
 func aumentarDificultad(delta):
 	gravedad += 0.09 * delta
@@ -53,6 +56,7 @@ func MovDer():
 	if Input.is_action_pressed("ui_right"):
 		position.x += velMov
 		sprite.flip_h = false
+		
 
 func Acomodarse():
 	if position.x < 0: # arreglar resolucion
@@ -65,11 +69,14 @@ func contarTiempoDeCaida(delta):
 		tiempoDeCaida += 1 * delta
 		print(tiempoDeCaida)
 
+
 func dejaDeSubir(deltis):
 	if salto >0 :
+		fuego.visible = true
 		#get_node("Camera2D").limit_bottom = position.y +1000
 		salto -= (gravedad + salto)/2 * deltis
-
+	if gravedad - salto > 0:
+		fuego.visible = false
 
 		
 

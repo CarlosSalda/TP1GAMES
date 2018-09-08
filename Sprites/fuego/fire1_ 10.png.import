@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/5dced3fc175023274d8734681c6be31b.png-66c5bec5de1881268a1c8cf25064bfc2.stex"
+path="res://.import/fire1_ 10.png-43fe01ac2a7a098e8ad3479e3e286e40.stex"
 
 [deps]
 
-source_file="res://Sprites/5dced3fc175023274d8734681c6be31b.png"
-dest_files=[ "res://.import/5dced3fc175023274d8734681c6be31b.png-66c5bec5de1881268a1c8cf25064bfc2.stex" ]
+source_file="res://Sprites/fuego/fire1_ 10.png"
+dest_files=[ "res://.import/fire1_ 10.png-43fe01ac2a7a098e8ad3479e3e286e40.stex" ]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fuente/PoiretOne-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=2]
@@ -12,6 +12,14 @@ font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
+
+size = 50
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
 
 size = 50
 use_mipmaps = false
@@ -50,10 +58,10 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 244.0
-margin_top = 215.0
-margin_right = 642.0
-margin_bottom = 407.0
+margin_left = 241.0
+margin_top = 24.0
+margin_right = 639.0
+margin_bottom = 216.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -67,16 +75,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Anchor", "custom_fonts" ]
 
-[node name="Button" type="Button" parent="." index="2"]
+[node name="Play" type="Button" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 286.0
-margin_top = 534.0
-margin_right = 507.0
-margin_bottom = 627.0
+margin_left = 292.0
+margin_top = 203.0
+margin_right = 513.0
+margin_bottom = 296.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -95,5 +103,32 @@ align = 1
 script = ExtResource( 2 )
 _sections_unfolded = [ "custom_fonts" ]
 panelPerdi = false
+
+[node name="Ranking" type="Button" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 287.0
+margin_top = 375.0
+margin_right = 520.0
+margin_bottom = 474.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Ranking"
+flat = false
+align = 1
+_sections_unfolded = [ "Focus", "custom_fonts" ]
 
 

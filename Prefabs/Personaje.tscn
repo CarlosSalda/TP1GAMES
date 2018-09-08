@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Personaje.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Hamster.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Fuego.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Fuego.gd" type="Script" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -16,6 +18,7 @@ collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "Z Index", "collision" ]
 gravedad = 25
 velMov = 0
 tiempoDeCaidaMax = 1
@@ -29,5 +32,13 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+
+[node name="AnimatedSprite" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( -23, 88 )
+scale = Vector2( 1.90625, 1.90625 )
+z_index = -1
+script = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 

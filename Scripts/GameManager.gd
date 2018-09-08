@@ -36,8 +36,9 @@ func MostrarMenuMeMori():
 		
 
 func Puntaje():
-	puntaje = str(-(int( personaje.position.y))/100)
-	text.text = puntaje
+	if personaje.tiempoDeCaida == 0:
+		puntaje = str(-(int( personaje.position.y))/50)
+		text.text = puntaje
 
 func ponerPrimeraPlataforma():
 	var scene_instance = list[1]
