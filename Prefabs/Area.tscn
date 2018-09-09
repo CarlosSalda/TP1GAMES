@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 60.1914, 28.3118 )
 
-[node name="AreaManager" type="Node2D" index="0"]
+[node name="AreaManager" type="Node2D"]
 
 position = Vector2( 521.388, 512.978 )
 _sections_unfolded = [ "Material", "Transform" ]
@@ -33,7 +33,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area1" index="1"]
 
+z_index = -1
 shape = SubResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 

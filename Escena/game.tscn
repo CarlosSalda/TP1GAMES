@@ -20,7 +20,7 @@ code = ""
 render_priority = 0
 shader = SubResource( 1 )
 
-[node name="GameManager" type="Node2D"]
+[node name="GameManager" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause", "Transform", "Z Index" ]
@@ -71,6 +71,8 @@ _sections_unfolded = [ "Limit", "Material", "Offset" ]
 
 [node name="BackgroundManager" parent="." index="3" instance=ExtResource( 10 )]
 
-areaInstance = null
+modulate = Color( 0.542969, 0.528122, 0.528122, 1 )
+position = Vector2( -2.51758, 0 )
+_sections_unfolded = [ "Visibility" ]
 
 

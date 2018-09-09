@@ -15,6 +15,6 @@ func colision(target,colisionado):
 		var scene_instance = list[0].instance()
 		scene_instance.set_name("Background")
 		add_child(scene_instance)
-		scene_instance.translate(Vector2(area1.position.x,ultimoInstanciado- 1500))	
+		scene_instance.translate(Vector2(area1.position.x,ultimoInstanciado- 1524))	
 		ultimoInstanciado = scene_instance.position.y
 		ultimo = scene_instance.position.y
