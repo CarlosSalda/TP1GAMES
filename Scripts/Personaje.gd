@@ -9,13 +9,14 @@ var tiempoDeCaida = 0
 export var tiempoDeCaidaMax = 1
 var saltoExtra = 0
 var sprite
-var fuego
+var fuego1
 var unSalto = false
 
 func _ready():
-	fuego = get_node("AnimatedSprite")
+	fuego1 = get_node("Fuego1")
 	padre = get_parent()
 	sprite = get_node("Sprite")
+	self.set_meta("type","Personaje")
 	
 
 func _process(delta):
@@ -31,6 +32,7 @@ func _process(delta):
 func caerYSaltar(deltis):
 	collision = move_and_collide(Vector2(0,gravedad - salto ))		
 	if collision != null and collision.collider.get_meta("type") == "Plataforma": #Alto cortocircuito guarda
+		print(collision)
 		tiempoDeCaida = 0
 		salto = collision.collider.colision(self)
 		collision = null
@@ -73,11 +75,13 @@ func contarTiempoDeCaida(delta):
 
 func dejaDeSubir(deltis):
 	if salto >0 :
-		fuego.visible = true
+		fuego1.visible = true
+
 		#get_node("Camera2D").limit_bottom = position.y +1000
 		salto -= (gravedad + salto)/2 * deltis
 	if gravedad - salto > 0:
-		fuego.visible = false
+		fuego1.visible = false
+	
 
 		
 

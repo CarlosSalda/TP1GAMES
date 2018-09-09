@@ -14,7 +14,7 @@ export var listPowerUp= []
 export var puedoTenerPowerUp = false
 var personaje= null
 export var distanciaDeBorrado = 600
-var scene = load("res://Prefabs/jetpack.tscn") #Momentaneo
+var scene = load("res://Prefabs/Nasta.tscn") #Momentaneo
 var scene_instance = scene.instance()
 var gameManager 
 #timeout is what says in docs, in signals

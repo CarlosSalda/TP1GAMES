@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Plataforma.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Prefabs/puntaje.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=9]
+[ext_resource path="res://Prefabs/BackgroundManager.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Shader" id=1]
 
@@ -19,10 +20,10 @@ code = ""
 render_priority = 0
 shader = SubResource( 1 )
 
-[node name="GameManager" type="Node2D" index="0"]
+[node name="GameManager" type="Node2D"]
 
 script = ExtResource( 1 )
-_sections_unfolded = [ "Pause", "Transform" ]
+_sections_unfolded = [ "Pause", "Transform", "Z Index" ]
 list = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 6 ) ]
 rango1X = 10
 rango2X = 800
@@ -35,6 +36,7 @@ distancia = 150
 
 position = Vector2( 390, 500 )
 scale = Vector2( 1, 1.01929 )
+z_index = 2
 velMov = 5
 tiempoDeCaidaMax = 2
 
@@ -66,5 +68,9 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 script = ExtResource( 9 )
 _sections_unfolded = [ "Limit", "Material", "Offset" ]
+
+[node name="BackgroundManager" parent="." index="3" instance=ExtResource( 10 )]
+
+areaInstance = null
 
 

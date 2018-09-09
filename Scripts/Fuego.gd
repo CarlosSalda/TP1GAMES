@@ -8,10 +8,10 @@ func _ready():
 	
 
 func _process(delta):
-	acomodarmeAlPersonaje()
+		acomodarmeAlPersonaje(22)
 
-func acomodarmeAlPersonaje():
+func acomodarmeAlPersonaje(muv):
 	if padre.sprite.flip_h == true:
-		self.position.x = 22
+		self.position.x = muv
 	else:
 		self.position.x = posOriginal

@@ -33,11 +33,12 @@ _sections_unfolded = [ "Offset", "Transform" ]
 
 shape = SubResource( 1 )
 
-[node name="AnimatedSprite" parent="." index="2" instance=ExtResource( 3 )]
+[node name="Fuego1" parent="." index="2" instance=ExtResource( 3 )]
 
-position = Vector2( -23, 88 )
-scale = Vector2( 1.90625, 1.90625 )
+position = Vector2( -21.8875, 79.185 )
+scale = Vector2( 1.71539, 1.71539 )
 z_index = -1
+frame = 7
 script = ExtResource( 4 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 

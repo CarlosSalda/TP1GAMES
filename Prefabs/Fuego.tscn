@@ -28,7 +28,7 @@ _sections_unfolded = [ "Resource" ]
 
 frames = SubResource( 1 )
 animation = "Fuego"
-frame = 6
+frame = 8
 playing = true
 flip_v = true
 _sections_unfolded = [ "Material" ]
