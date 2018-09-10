@@ -19,7 +19,7 @@ animations = [ {
 "speed": 0.1
 } ]
 
-[node name="StaticBody2D" type="StaticBody2D" index="0"]
+[node name="StaticBody2D" type="StaticBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -53,12 +53,12 @@ animation = "Resorte"
 
 [node name="AnimatedSprite2" parent="." index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 60.2734, 76.5634 )
-frame = 4
+position = Vector2( 60.9904, 77.2804 )
+frame = 11
 
 [node name="AnimatedSprite3" parent="." index="3" instance=ExtResource( 4 )]
 
-position = Vector2( -69.2328, 86.3375 )
-frame = 3
+position = Vector2( -69.2328, 85.979 )
+frame = 10
 
 

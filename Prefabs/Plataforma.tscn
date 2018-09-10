@@ -56,11 +56,12 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="AnimatedSprite2" parent="." index="2" instance=ExtResource( 5 )]
 
-position = Vector2( -61.4227, 65.6587 )
-frame = 9
+position = Vector2( -60.3637, 68.0289 )
+frame = 12
 
 [node name="AnimatedSprite3" parent="." index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 61.4227, 59.3047 )
+position = Vector2( 62.3504, 58.0678 )
+frame = 11
 
 

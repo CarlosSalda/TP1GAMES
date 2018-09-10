@@ -32,11 +32,9 @@ func _process(delta):
 func caerYSaltar(deltis):
 	collision = move_and_collide(Vector2(0,gravedad - salto ))		
 	if collision != null and collision.collider.get_meta("type") == "Plataforma": #Alto cortocircuito guarda
-		print(collision)
 		tiempoDeCaida = 0
 		salto = collision.collider.colision(self)
 		collision = null
-		print(gravedad - salto)
 	if collision != null and collision.collider.get_meta("type") == "PowerUp":
 		collision.collider.colision(self)
 		tiempoDeCaida = 0 #esto es por si es un power up que te  hace saltar 
@@ -70,13 +68,12 @@ func Acomodarse():
 func contarTiempoDeCaida(delta):
 	if gravedad - salto > 0:
 		tiempoDeCaida += 1 * delta
-		print(tiempoDeCaida)
+	
 
 
 func dejaDeSubir(deltis):
 	if salto >0 :
 		fuego1.visible = true
-
 		#get_node("Camera2D").limit_bottom = position.y +1000
 		salto -= (gravedad + salto)/2 * deltis
 	if gravedad - salto > 0:

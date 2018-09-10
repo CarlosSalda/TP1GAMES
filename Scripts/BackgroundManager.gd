@@ -1,20 +1,24 @@
 extends Node2D
-var area1
-var newArea
-export var list = []
 var ultimo
-var ultimoInstanciado
+var guardamelo
+var background1
+var background2
+var personaje
+var actual
 func _ready():
-	area1 = get_node("Area2D")
-	ultimoInstanciado = area1.position.y  
-	ultimo = 900
 	
-func colision(target,colisionado):
-	if target.get_meta("type") == "Personaje" and colisionado.position.y != ultimo:
-		print(colisionado)
-		var scene_instance = list[0].instance()
-		scene_instance.set_name("Background")
-		add_child(scene_instance)
-		scene_instance.translate(Vector2(0,ultimoInstanciado- 1000))	
-		ultimoInstanciado = scene_instance.position.y
-		ultimo = scene_instance.position.y
+	background1 = get_node("Background")
+	background2 = get_node("Background2")
+	personaje = get_parent().get_node("Personaje")
+	actual = background1
+	ultimo = background2
+	
+func _process(delta):
+	colision()
+	
+func colision():
+	if personaje.position.y < actual.position.y and personaje.position.y != ultimo.position.y :
+		ultimo.translate(Vector2(0,-4000))
+		guardamelo = actual
+		actual = ultimo
+		ultimo = guardamelo

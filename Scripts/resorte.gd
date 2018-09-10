@@ -38,7 +38,7 @@ func _ready():
 	if soyMovible:
 		timer.start()
 	posibilidadDePlataforma()
-		
+	
 func _process(delta):
 	aumentarDificultad(delta)
 	borrameSiNoEstoyVisible()

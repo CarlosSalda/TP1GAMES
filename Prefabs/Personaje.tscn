@@ -11,7 +11,7 @@ custom_solver_bias = 0.0
 radius = 30.0
 height = 60.0
 
-[node name="KinematicBody2D" type="KinematicBody2D" index="0"]
+[node name="KinematicBody2D" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -38,7 +38,7 @@ shape = SubResource( 1 )
 position = Vector2( -21.8875, 79.185 )
 scale = Vector2( 1.71539, 1.71539 )
 z_index = -1
-frame = 7
+frame = 10
 script = ExtResource( 4 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 

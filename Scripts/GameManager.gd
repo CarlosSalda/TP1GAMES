@@ -61,7 +61,7 @@ func Plataformas(facilidadInicial = 0): #Esta medio fiero	, podria estar mejor
 		add_child(scene_instance)
 		scene_instance.translate(Vector2 (DameAleatorio( rango1X + 50,rango2X),DameAleatorio(yDePlataformas ,yDePlataformas -10)))
 		yDePlataformas -= distancia - facilidadInicial
-	print("MAS PLATAFORMAS")
+
 
 		
 
