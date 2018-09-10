@@ -16,7 +16,7 @@ func _ready():
 	personaje = get_node("Personaje")
 	ponerPrimeraPlataforma()
 	yDePlataformas = personaje.position.y
-	cantidadDePlataformas(15)
+	cantidadDePlataformas(8)
 	
 
 
@@ -27,7 +27,7 @@ func _process(delta):
 	
 func cantidadDePlataformas(cant):
 	for i in cant :
-		Plataformas()
+		Plataformas(100)
 
 func MostrarMenuMeMori():
 		get_tree().paused = true
@@ -53,14 +53,14 @@ func ponerPrimeraPlataforma(): #  en el ready poner siempre esto
 	
 		
 	
-func Plataformas(posActualX= 0,posActualY= 0, extra = 0): #Esta medio fiero	, podria estar mejor 
+func Plataformas(facilidadInicial = 0): #Esta medio fiero	, podria estar mejor 
 	for i in cantidadMax :
 		var scene_instance = list[int(DameAleatorio(1,list.size()))]
 		scene_instance = scene_instance.instance()
 		scene_instance.set_name("Plataforma")
 		add_child(scene_instance)
-		scene_instance.translate(Vector2 (DameAleatorio(posActualX + rango1X + 50,posActualX + rango2X),DameAleatorio(yDePlataformas ,yDePlataformas -10)))
-		yDePlataformas -= distancia
+		scene_instance.translate(Vector2 (DameAleatorio( rango1X + 50,rango2X),DameAleatorio(yDePlataformas ,yDePlataformas -10)))
+		yDePlataformas -= distancia - facilidadInicial
 	print("MAS PLATAFORMAS")
 
 		

@@ -1,21 +1,15 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/Area1.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/cloud2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/cloud2 (1).png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 60.1914, 28.3118 )
+extents = Vector2( 950.181, 164.331 )
 
-[node name="AreaManager" type="Node2D"]
+[node name="Area2D" type="Area2D"]
 
-position = Vector2( 521.388, 512.978 )
-_sections_unfolded = [ "Material", "Transform" ]
-
-[node name="Area1" type="Area2D" parent="." index="0"]
-
-scale = Vector2( 16.0057, 1.47535 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -25,16 +19,15 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Area1" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-scale = Vector2( 0.0624779, 0.677804 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform" ]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area1" index="1"]
-
-z_index = -1
+position = Vector2( 0, -100 )
+scale = Vector2( 1, 0.287757 )
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+texture = ExtResource( 2 )
 
 

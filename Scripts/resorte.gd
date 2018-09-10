@@ -17,11 +17,17 @@ export var distanciaDeBorrado = 600
 var scene = load("res://Prefabs/Nasta.tscn") #Momentaneo
 var scene_instance = scene.instance()
 var gameManager 
+var sprite
+var fuego1
+var fuego2
 #timeout is what says in docs, in signals
 #self is who respond to the callback
 #_on_timer_timeout is the callback, can have any name
 
 func _ready():
+	sprite = get_node("AnimatedSprite")
+	fuego1 = get_node("AnimatedSprite2")
+	fuego2 = get_node("AnimatedSprite3")
 	self.set_meta("type","Plataforma")
 	gameManager = get_parent()
 	timer = Timer.new()
@@ -53,6 +59,11 @@ func _on_timer_timeout():
 func colision(personaje):
 	if meRompo:
 		queue_free()
+	if not meRompo:
+		sprite.frame= 1
+		sprite.playing = true
+		fuego1.visible = false
+		fuego2.visible = false
 	gameManager.Plataformas() 
 	return salto + saltoExtra
 

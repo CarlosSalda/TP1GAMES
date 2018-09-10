@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Plataforma.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Prefabs/Personaje.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scripts/Camera2D.gd" type="Script" id=9]
 [ext_resource path="res://Prefabs/BackgroundManager.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Sprites/cloud2 (1).png" type="Texture" id=11]
 
 [sub_resource type="Shader" id=1]
 
@@ -27,14 +28,14 @@ _sections_unfolded = [ "Pause", "Transform", "Z Index" ]
 list = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 6 ) ]
 rango1X = 10
 rango2X = 800
-cantidadMax = 100
-distancia = 150
+cantidadMax = 10
+distancia = 300
 
 [node name="CanvasLayer" parent="." index="0" instance=ExtResource( 7 )]
 
 [node name="Personaje" parent="." index="1" instance=ExtResource( 8 )]
 
-position = Vector2( 390, 500 )
+position = Vector2( 390, 700 )
 scale = Vector2( 1, 1.01929 )
 z_index = 2
 velMov = 5
@@ -69,10 +70,22 @@ editor_draw_drag_margin = false
 script = ExtResource( 9 )
 _sections_unfolded = [ "Limit", "Material", "Offset" ]
 
-[node name="BackgroundManager" parent="." index="3" instance=ExtResource( 10 )]
+[node name="BackgroundManager3" parent="." index="3" instance=ExtResource( 10 )]
 
-modulate = Color( 0.542969, 0.528122, 0.528122, 1 )
-position = Vector2( -2.51758, 0 )
-_sections_unfolded = [ "Visibility" ]
+position = Vector2( 443.481, -22.7819 )
+
+[node name="BackgroundManager4" parent="." index="4" instance=ExtResource( 10 )]
+
+position = Vector2( 443.481, -1036.5 )
+
+[node name="Sprite" type="Sprite" parent="." index="5"]
+
+position = Vector2( 443.481, 989.031 )
+texture = ExtResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="." index="6"]
+
+position = Vector2( 443.481, 2000.61 )
+texture = ExtResource( 11 )
 
 
