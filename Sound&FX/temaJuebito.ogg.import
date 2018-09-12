@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/temaJuebito.ogg-971cb308f33c57eaae7efaee346c6bd2.oggstr"
+
+[deps]
+
+source_file="res://Sound&FX/temaJuebito.ogg"
+dest_files=[ "res://.import/temaJuebito.ogg-971cb308f33c57eaae7efaee346c6bd2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -4,6 +4,9 @@
 
 [node name="Background" type="Node2D"]
 
+position = Vector2( 40.5427, -40.5427 )
+scale = Vector2( 2.26696, 2.26696 )
+
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
 scale = Vector2( 1.96953, 1.96953 )

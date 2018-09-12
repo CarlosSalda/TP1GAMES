@@ -10,7 +10,9 @@ export var distancia= 0
 var yDePlataformas = 0
 var scene = load("res://Escena/PanelPerdiste.tscn") 
 var scene_instance = scene.instance()
+var audio
 func _ready():
+	audio = get_node("AudioStreamPlayer2D")
 	rango2X = get_viewport().size.x - 50
 	text = get_node("CanvasLayer/Label")
 	personaje = get_node("Personaje")
